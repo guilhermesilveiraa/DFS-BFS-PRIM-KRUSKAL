@@ -1,8 +1,8 @@
-# Repositório para estudos em grafos
+# Repositório para estudos em grafos ⚪->⚪->⚪
 
 Este repositório tem por objetivo firmar meus conhecimentos na matéria de grafos. Estou estudando pelo livro Projeto de Algoritmos do Nívio Ziviani.
 
-## DFS 
+## DFS ⛏️
 
 A busca em profundidade (depth-first search) é um algoritmo para caminhar no grafo cuja estratégia é a de buscar, sempre que possível, o mais profundo no grafo. As arestas são exploradas a partir do vértice v mais recentemente descoberto que ainda possui arestas não exploradas saindo dele. Quando todas as arestas adjacentes à v tiverem sido exploradas então a busca anda para trás (backtrack) para explorar vértices que saem do vértice do qual v foi descoberto. ***O processo continua até que todos os vértices alcançáveis a partir do vértice original sejam descobertos***. [Ziviani]
 
@@ -10,7 +10,7 @@ O algoritmo é base para verificação de grafos acíclicos, ordenação topoló
 
 A complexidade total do DFS é de O(|v| + |a|) isto é porque durante a execução do DFS, cada vértice é visitado uma única vez e, para cada vértice, são exploradas todas as suas arestas adjacentes. Assim, o tempo gasto é proporcional à soma do número de vértices e do número de arestas no grafo.
 
-#### Exemplo de DFS (saida main_dfs.c)
+#### Exemplo de DFS (saida main_dfs.c) 
 
         Imprimindo Grafo G...
 
@@ -50,7 +50,7 @@ A complexidade total do DFS é de O(|v| + |a|) isto é porque durante a execuç�
 
         Vértice  0 - Tempo de término: 10 [PRETO]
 
-## BFS
+## BFS 📏
 
 A busca em largura é assim chamada porque ela expande a fronteira entre os vértices descobertos e não descobertos uniformemente por meio da largura da fronteira. O algoritmo é base para o algoritmo de Prim e Djkistra. Dado um grafo G(V,A) e um vértice origem u, a busca em largura explora sistematicamente as arestas de G com o objetivo de descobrir todos os vértices que são alcançáveis a partir de u. Para acompanhar o progresso do algoritmo cada vértice é colorido de branco, cinza ou preto. Todos os vértices são inicializados brancos, podem posteriormente se tornarem cinzas e finalmente pretos. Quando um vértice é descoberto pela primeira vez durante a busca ele se torna cinza.
 
