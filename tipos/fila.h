@@ -1,3 +1,4 @@
+#define MAXTAM 1000
 
 typedef int Tap;
 typedef int Tch;
@@ -9,7 +10,7 @@ typedef struct
 
 typedef struct
 {
-    TipoItem Item[1000000];
+    TipoItem Item[MAXTAM];
     Tap frente, tras;
 }TipoFila;
 
@@ -17,5 +18,5 @@ void filaVazia(TipoFila *fila);
 int vazia(TipoFila fila);
 void enfileira(TipoItem x, TipoFila *fila);
 void desinfileira(TipoFila *fila, TipoItem *item);
-
+void ImprimeFila(TipoFila fila);
 
