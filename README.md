@@ -192,5 +192,22 @@ O algoritmo de Prim utiliza estratégia gulosa que permite obter a árvore gerad
         
         Vértice 3: -> Vértice 4 (Peso 50)
 
+## Kruskal 🌳🤏
 
+Assim como o algoritmo de Prim, o algoritmo de Kruskal obtém uma árvore geradora mínima. No algoritmo de Kruskal, o conjunto *S* é uma floresta. Ele começa com uma floresta, onde cada vértice é inicialmente considerado uma árvore separada. O algoritmo classifica todas as arestas em ordem crescente de peso e, em seguida, adiciona as arestas de menor peso que não formam ciclos, até que todos os vértices estejam conectados em uma única árvore. Isso é feito com o uso de uma estrutura de união e busca (Union-Find) para verificar se a adição de uma aresta criaria um ciclo. O custo da árvore geradora mínima é a soma dos pesos das arestas que fazem parte da árvore resultante, *O(ElogE)*.
+
+### Pseudo-Código
+
+KRUSKAL(G):
+
+    Inicializar uma floresta F (cada vértice é uma árvore individual)
+    Inicializar um conjunto vazio T para armazenar as arestas da árvore geradora mínima
+    Ordenar todas as arestas de G por peso crescente
+    Para cada aresta (u, v) em ordem crescente de peso:
+        Se u e v pertencem a diferentes componentes (árvores):
+            Adicionar a aresta (u, v) ao conjunto T
+            Unir as árvores que contêm u e v
+    Retornar T (as arestas da árvore geradora mínima)
+
+### Exemplo (saida main_kruskal.c) 
 
